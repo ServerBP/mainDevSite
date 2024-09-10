@@ -7,7 +7,7 @@
   let cursorTrail = [];
   let container;
 
-  function toggleExpand(box: string) {
+  function toggleExpand(box) {
     expandedBox = expandedBox === box ? null : box;
   }
 
