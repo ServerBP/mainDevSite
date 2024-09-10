@@ -61,7 +61,9 @@
           {#if !expandedBox}
             <button class="read-more">
               Read More
-              <span class="material-icons">arrow_downward</span>
+              <span class="material-symbols-outlined">
+                arrow_downward
+                </span>
             </button>
           {/if}
         {/if}
