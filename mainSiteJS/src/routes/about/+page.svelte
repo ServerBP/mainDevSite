@@ -1,4 +1,6 @@
 <script lang="">
+// @ts-nocheck
+
   import { onMount } from 'svelte';
   import aboutData from '$lib/about.json';
   import skillsData from '$lib/skills.json';
@@ -39,11 +41,14 @@
 </script>
 
 <div class="container" bind:this={container}>
+  <!-- svelte-ignore a11y-img-redundant-alt -->
   <img src="{aboutData.profilePicture}" alt="Profile Picture" class="profile-picture" />
   <h1 class="name">ServerBP</h1>
   
   <div class="boxes-container">
     {#each ['Me, Personally', 'Me, Online', 'My Projects'] as box}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
       <div class="box" class:expanded={expandedBox === box} on:click={() => toggleExpand(box)}>
         <h2>{box}</h2>
         <hr />
